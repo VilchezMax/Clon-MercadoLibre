@@ -24,10 +24,10 @@ body {
 header {
     border: #EAC926, 16px;
     font-size: 12px;
-    
 }
 header p{
     text-align: center;
+    color:#03264C;
 }
 .fondo-amarillo {
     background-color: #EAC926;
@@ -35,7 +35,6 @@ header p{
     padding-left: 8px;
     padding-top: 20px;
 }
-
 nav {
     text-align: left;
     margin-left: 0px;
@@ -48,46 +47,145 @@ ul {
 .links-nav {
     list-style-type: none;
     text-align: left;
-    
+}
+ul.links-nav li a{
+    text-decoration: none;
+    color:#03264C;
 }
 .burger-menu {
+   text-align: center;
+}
+.burger-menu i{
+    background-color: #0f56a1;
     color: white;
     text-decoration: none;
-    background-color: #0f56a1;
-    text-align: center;
-    align-items: center;
     width: 18px;
     height: 18px;
-    padding: 6px;
+    padding: 3px;
     border-radius: 5px;
-    margin-left: 150px;
     border: 5rem;
+    position: relative;
 }
-.icon {
+.fa-bars:before {
+    position: relative;
+    top: 3px;
+}
+button.lupa{
     text-align: left;
     height: 18px;
-    width: 17px;
-    padding-left: 0.1px;
+    width: 18px;
+    padding-left: 1.5px;
 }
-/* FIN HEADER ------ INICION MAIN */
+
+/* ------  FIN HEADER  ------ */
+
+img.banner{
+    display: block;
+    width: 100vw;
+}
+
+/* ------ INICIO MAIN ------ */
 
 main{
     background-color:#ebebeb;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
 }
-.precio {
-    font-size: 18px;
+main section{
+    width: 90vw;
+    display:block;   
+}
+main section article{
+    transition: box-shadow 300ms;
+    margin: 10px 0px;
+    background-color: white;
+    display: inline-block;
+    transition: all 300ms;
+    
 }
 
-.descuento {
+/* CLASE 5
+main section article:hover i{
+    transform:rotateZ(630deg);
+}
+main section article:hover .descripcion{
+opacity: 100;
+}
+.descripcion{
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 300ms;
+} */
+
+
+main section article img{
+    width: 100%;
+}
+
+main section .contenedor-articulos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+main section article h3.descripcion{
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+main section article .producto{
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+main section article .producto i{
+    display: block;
+    border-radius: 50px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #39b54a;
+    background-color: white;
+    color: #39b54a;
+    padding: 5px;
+    position: relative;
+    right: -75%;
+    top: -171px;
+    transition: all 500ms;
+}
+
+main section article:hover i{
+    transform:rotateZ(630deg);
+}
+
+.fa-truck:before {
+    position: relative;
+    right: 1px;
+}
+
+main section article .producto .precio {
+    font-size: 18px;
+    
+    width: 50%;
+}
+
+main section article .producto .descuento {
     font-size: 16px;
+    
+    width: 50%;
+    color: #39b54a;
 }
 
 h3 {
     font-size: 16px;
+    display: inline;
 }
-
-h2 {
-    font-size: 24px
+h2{
+    font-size: 24px;
+    color:#666;
 }
 h4 {
     margin: 2px;
@@ -97,14 +195,21 @@ h4 {
 footer {
     text-align: center;
     margin-inline: 10px, #666;
+    background-color: #ebebeb;
+    padding-top: 14px;
 }
+
 footer p {
     font-size: 12px;
+    margin: 0;
+    padding: 6px;
 }
+
 .texto-footer {
     margin-top: 2px;
-    margin-inline: 50px;
+    margin-inline: 30px;
 }
+
 footer .fa-solid {
     color: #0f56a1;
     font-size: 2em;
@@ -114,4 +219,45 @@ footer .fa-solid {
 .copyright {
     text-align: left;
     margin-inline-start: 6px;
+    text-align: center;
+}
+
+/* ~~~ Tablet ~~~ */
+@media(min-width: 361px){
+    article{
+        width: 40vw
+    }
+    main section article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    main section article:hover h3.descripcion{
+        opacity:100;
+    }
+    main section article .descripcion{
+        display: block;
+    }
+
+}
+
+/*~~~ Desktop ~~~*/
+
+@media (min-width: 769px) {
+    article{
+        width: 20vw;
+    }
+   footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around
+    }
+    .elemento-footer{
+        width: 33%;
+    }
+    footer p.copyright{
+        margin:auto;
+        position: relative;
+        top: -3px;
+        right: 33vw;
+        
+    }
 }
