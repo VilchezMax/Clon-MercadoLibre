@@ -16,11 +16,13 @@ Descripciones: 16px                  */
 
 *{
     font-family: 'Roboto', sans-serif;
+    outline: 1px solid red;
 }
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;   
 }
+/* ------ HEADER ----- */
 header {
     border: #EAC926, 16px;
     font-size: 12px;
@@ -29,13 +31,47 @@ header p{
     text-align: center;
     color:#03264C;
 }
-.fondo-amarillo {
+header .fondo-amarillo {
     background-color: #EAC926;
-    padding-bottom: 16px;
-    padding-left: 8px;
-    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
+header .fondo-amarillo .contenedor-ppal-header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 2px;
+}
+
+header .fondo-amarillo .logo-header{
+    width: 50%
+}
+header .fondo-amarillo .searchbar-header{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+header .fondo-amarillo input{
+    line-height:20px;
+    overflow: hidden;
+    border: none;
+    border-radius: 4px;
+}
+button.lupa{
+    background-color: rgb(255, 255, 255);
+    border:none;
+    position: relative;
+    right:20px;
+    border-radius: 4px;
+}
+button i.fa-search{
+ color:#666;
+}
+
+/* ----- NAV DEL HEADER ------ */
+
 nav {
+    display:none;
     text-align: left;
     margin-left: 0px;
     border-left: 0;
@@ -67,15 +103,11 @@ ul.links-nav li a{
     position: relative;
 }
 .fa-bars:before {
+    display:block;
     position: relative;
     top: 3px;
 }
-button.lupa{
-    text-align: left;
-    height: 18px;
-    width: 18px;
-    padding-left: 1.5px;
-}
+
 
 /* ------  FIN HEADER  ------ */
 
@@ -123,13 +155,17 @@ opacity: 100;
 main section article img{
     width: 100%;
 }
-
+main section article {
+    padding: 2px;
+    
+}
 main section .contenedor-articulos{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    padding: 5px;
 }
 
 main section article h3.descripcion{
@@ -139,7 +175,7 @@ main section article h3.descripcion{
 
 main section article .producto{
     border-top: 1px solid #ebebeb;
-    padding: 15px;
+    padding: 10px;
 }
 
 main section article .producto i{
@@ -153,7 +189,7 @@ main section article .producto i{
     padding: 5px;
     position: relative;
     right: -75%;
-    top: -171px;
+    top: -157px;
     transition: all 500ms;
 }
 
@@ -213,7 +249,7 @@ footer p {
 footer .fa-solid {
     color: #0f56a1;
     font-size: 2em;
-    margin-bottom   : 10px;
+    margin-bottom: 10px;
 }
 
 .copyright {
@@ -224,6 +260,23 @@ footer .fa-solid {
 
 /* ~~~ Tablet ~~~ */
 @media(min-width: 361px){
+    .logo-header img{
+        width: 9rem;
+        padding-left: 30px;
+    }
+    
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    nav ul{
+        display:flex;
+        flex-direction: column;
+    }
+    .burger-menu {
+        display:none;
+     }
     article{
         width: 40vw
     }
@@ -236,14 +289,85 @@ footer .fa-solid {
     main section article .descripcion{
         display: block;
     }
+    main section article .producto i{
+        right: -75%;
+        top: -207px;
+    }
+}   
+@media (min-width: 451px) {
+    .top-header{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    header .fondo-amarillo .contenedor-ppal-header{
+        width:66%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    header .fondo-amarillo .searchbar-header{
+        height: 1.2rem;
+        width: 35%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
 
+    }
+    input.lupa{
+        
+    }
+    header .fondo-amarillo .frase-header{
+        width:33%;
+    }
+    button.lupa{
+        text-align: center;
+        height: 1.2rem;
+        width: 1.2rem;
+        padding-top: 2px;
+        padding-left: 1.5px;
+        padding-right: 2px;
+        background-color: #e7e7e7;
+
+    }
+    button i.fa-search{
+        color:black
+       }
+
+    nav{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    nav ul.links-nav{
+        display:flex;
+        flex-direction: row;
+    }
+    nav ul.links-nav > li {
+        padding: 0px 4px;
+    }
+    main section article .producto i{
+    top: -185px;
+    }
 }
 
 /*~~~ Desktop ~~~*/
 
 @media (min-width: 769px) {
+    header .fondo-amarillo{
+        padding-bottom: 8px;
+    }
+    nav ul.links-nav > li {
+        padding: 0px 14px;
+    }
     article{
-        width: 20vw;
+        width: 21vw;
+    }
+    main section article .producto i{
+        right: -75%;
+        top: -190px;
     }
    footer{
         display: flex;
