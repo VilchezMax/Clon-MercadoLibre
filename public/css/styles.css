@@ -16,6 +16,7 @@ Descripciones: 16px                  */
 
 *{
     font-family: 'Roboto', sans-serif;
+    outline: 1px solid red;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -136,21 +137,6 @@ main section article{
     transition: all 300ms;
     
 }
-
-/* CLASE 5
-main section article:hover i{
-    transform:rotateZ(630deg);
-}
-main section article:hover .descripcion{
-opacity: 100;
-}
-.descripcion{
-    margin-top: 20px;
-    opacity: 0;
-    transition: opacity 300ms;
-} */
-
-
 main section article img{
     width: 100%;
 }
@@ -169,12 +155,18 @@ main section .contenedor-articulos{
 
 main section article h3.descripcion{
     opacity: 0;
-    transition: opacity 300ms;
+    display:none;
+    transition:all 300ms;
 }
 
 main section article .producto{
     border-top: 1px solid #ebebeb;
-    padding: 10px;
+    padding: 10px 4px 10px 10px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 main section article .producto i{
@@ -187,8 +179,8 @@ main section article .producto i{
     color: #39b54a;
     padding: 5px;
     position: relative;
-    right: -75%;
-    top: -157px;
+    top: -85px;
+    right: -65px;
     transition: all 500ms;
 }
 
@@ -203,15 +195,14 @@ main section article:hover i{
 
 main section article .producto .precio {
     font-size: 18px;
-    
-    width: 50%;
+    width: 45%;
 }
 
 main section article .producto .descuento {
     font-size: 16px;
-    
-    width: 50%;
+    width: 45%;
     color: #39b54a;
+    padding-left: 10px;
 }
 
 h3 {
@@ -283,14 +274,16 @@ footer .fa-solid {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     main section article:hover h3.descripcion{
+        display:block;
         opacity:100;
     }
     main section article .descripcion{
         display: block;
+        
     }
     main section article .producto i{
-        right: -75%;
-        top: -207px;
+        right: -30%;
+        top: -85px;
     }
 }   
 @media (min-width: 451px) {
@@ -349,10 +342,6 @@ footer .fa-solid {
     nav ul.links-nav > li {
         padding: 0px 10px;
     }
-    main section article .producto i{
-    top: -185px;
-    }
-}
 
 /*~~~ Desktop ~~~*/
 
@@ -365,10 +354,6 @@ footer .fa-solid {
     }
     article{
         width: 21vw;
-    }
-    main section article .producto i{
-        right: -75%;
-        top: -190px;
     }
    footer{
         display: flex;
