@@ -16,7 +16,6 @@ Descripciones: 16px                  */
 
 *{
     font-family: 'Roboto', sans-serif;
-    outline: 1px solid red;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -302,7 +301,7 @@ footer .fa-solid {
     }
     header .fondo-amarillo .contenedor-ppal-header{
         width:66%;
-        justify-content: space-between;
+        justify-content: space-evenly;
         flex-wrap: wrap;
         align-items: center;
     }
@@ -313,11 +312,9 @@ footer .fa-solid {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
 
-    }
-    input.lupa{
-        
     }
     header .fondo-amarillo .frase-header{
         width:33%;
@@ -330,6 +327,9 @@ footer .fa-solid {
         padding-left: 1.5px;
         padding-right: 2px;
         background-color: #e7e7e7;
+        position: relative;
+        left: 4px;
+        border: 1px solid black;
 
     }
     button i.fa-search{
@@ -339,14 +339,15 @@ footer .fa-solid {
     nav{
         display:flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+        margin: 0px 20px;
     }
     nav ul.links-nav{
         display:flex;
         flex-direction: row;
     }
     nav ul.links-nav > li {
-        padding: 0px 4px;
+        padding: 0px 10px;
     }
     main section article .producto i{
     top: -185px;
