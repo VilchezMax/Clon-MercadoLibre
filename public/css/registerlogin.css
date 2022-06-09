@@ -1,0 +1,102 @@
+ *{
+    outline: 1px solid red;
+} 
+form{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px;
+    justify-content: flex-start;
+}
+form .categoria{
+    width:  60%;
+    margin: 10px;
+    padding-inline: 15px;
+}
+form .categoria .fotoperfil, form .categoria .perfil{
+display:flex;
+flex-direction: column;
+}
+input {
+    border-radius: 4px;
+    overflow: hidden;
+}
+/* input[type="file"]{
+    color: rgba(0, 0, 0, 0); /*USO COLOR ASI DESAPARECE EL TEXTO DE "NO HA SELECCIONADO ARCHIVO" , CON OPACITY SE BORRA EL BOTON*/
+} */
+.categoria2{
+    width: 60%;
+    margin: 10px;
+    padding-inline: 15px;
+    display:flex;
+    flex-direction: column;
+}
+.categoria2>.categoria{
+    align-items: flex-start;
+}
+/* FOTO DE PERFIL */
+.contenedor-fotoperfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input[type="file"]{
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: none;
+    border: 0;
+    cursor:pointer;
+}
+.fotoPerfil{ 
+    border-radius: 4px;
+    border: 1px solid black;
+    padding: 1.5rem;
+    cursor: pointer;
+    width: 1.3rem;
+}
+.fa-add:before, .fa-plus:before {
+    color: black;
+    font-size: 1.2rem;
+}
+/* FIN FOTO PERFIL */
+
+/* BOTONES SUBMIT */
+form > button {
+    margin: 30px;
+    cursor: pointer;
+    transition: all 300ms;
+    
+}
+form button:hover{
+    background-color: #0f56a1;
+    border-radius: 4px;
+    color:white;
+    border-color: #03264C;
+    cursor: pointer;
+}
+
+
+@media (min-width: 361px){
+    form{
+        justify-content: space-around;
+    }
+    form .categoria{
+        width: 28%;
+    }
+    form .categoria2{
+        display:flex;
+        flex-direction: row;
+        width:90%;
+    }
+}
+@media (min-width: 769px){
+    main{
+        padding-inline: 40px;
+    }
+    form .categoria{
+        width: 40%;
+    }
+}

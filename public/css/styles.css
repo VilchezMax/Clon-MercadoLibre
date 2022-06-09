@@ -343,6 +343,19 @@ footer .fa-solid {
     header .fondo-amarillo{
         padding-bottom: 8px;
     }
+    header .fondo-amarillo img{
+        width: 300px;
+        padding-left: 0px;
+    }
+    header .fondo-amarillo .frase-header{
+        align-self: center;
+    }
+    header .fondo-amarillo .searchbar-header {
+        justify-content: center;
+    }
+    nav{
+        padding-inline: 10px;
+    }
     nav ul.links-nav > li {
         padding: 0px 14px;
     }
