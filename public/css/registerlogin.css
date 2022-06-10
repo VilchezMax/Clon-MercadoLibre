@@ -105,7 +105,9 @@ input[type="file"]{
 @media (min-width: 361px){
     form{
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
+        gap:20px;
+        align-items: center;
     }
     form .categoria{
         width: 28%;
@@ -118,9 +120,11 @@ input[type="file"]{
 @media (min-width: 769px){
     main{
         padding-inline: 40px;
+        justify-content: center;
     }
     form .categoria{
-        width: 40%;
+        width: 30%;
+        
     }
     .mercadoenvios{
         width: 50%;
