@@ -1,68 +1,45 @@
- *{
-    outline: 1px solid red;
-} 
+
 form{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     padding: 15px;
     justify-content: flex-start;
 }
 form .categoria{
-    width:  60%;
+    width:  40%;
     margin: 10px;
     padding-inline: 15px;
 }
 form .categoria .fotoperfil, form .categoria .perfil{
-display:flex;
-flex-direction: column;
-}
-input {
-    border-radius: 4px;
-    overflow: hidden;
-}
-/* input[type="file"]{
-    color: rgba(0, 0, 0, 0); /*USO COLOR ASI DESAPARECE EL TEXTO DE "NO HA SELECCIONADO ARCHIVO" , CON OPACITY SE BORRA EL BOTON*/
-} */
-.categoria2{
-    width: 60%;
-    margin: 10px;
-    padding-inline: 15px;
     display:flex;
     flex-direction: column;
 }
-.categoria2>.categoria{
-    align-items: flex-start;
-}
-/* FOTO DE PERFIL */
-.contenedor-fotoperfil{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+input{
+    border-radius: 4px;
+    max-width: 100%;
+    overflow: hidden;
 }
 input[type="file"]{
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip-path: none;
-    border: 0;
-    cursor:pointer;
+    color: rgba(0, 0, 0, 0); /*USO COLOR ASI DESAPARECE EL TEXTO DE "NO HA SELECCIONADO ARCHIVO" , CON OPACITY SE BORRA EL BOTON*/
 }
-.fotoPerfil{ 
+.mercadoenvios{
+    border: 1px solid #0f56a1;
     border-radius: 4px;
-    border: 1px solid black;
-    padding: 1.5rem;
+    padding: 4px;
+    width: fit-content;
+    color:white;
+    background-color: #0f56a1;
+    box-shadow: 0px 0px 10px #03264C;
+}
+.mercadoenvios a{
+    text-decoration: none;
+    color: #EAC926;
     cursor: pointer;
-    width: 1.3rem;
 }
-.fa-add:before, .fa-plus:before {
-    color: black;
-    font-size: 1.2rem;
+p.small{
+    font-size: small;
 }
-/* FIN FOTO PERFIL */
-
 /* BOTONES SUBMIT */
 form > button {
     margin: 30px;
@@ -81,16 +58,16 @@ form button:hover{
 
 @media (min-width: 361px){
     form{
+        flex-direction: row;
         justify-content: space-around;
     }
     form .categoria{
         width: 28%;
     }
-    form .categoria2{
-        display:flex;
-        flex-direction: row;
-        width:90%;
+    form .intereses .categoria{
+        align-items: center;
     }
+
 }
 @media (min-width: 769px){
     main{
@@ -98,5 +75,8 @@ form button:hover{
     }
     form .categoria{
         width: 40%;
+    }
+    .mercadoenvios{
+        width: 50%;
     }
 }
