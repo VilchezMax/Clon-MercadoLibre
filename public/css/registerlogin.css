@@ -54,7 +54,31 @@ form button:hover{
     border-color: #03264C;
     cursor: pointer;
 }
-
+/* FOTO PERFIL*/
+input[type="file"]{
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: none;
+    border: 0;
+    cursor:pointer;
+}
+.fotoPerfil{ 
+    border-radius: 4px;
+    border: 1px solid black;
+    display: inline-block;
+    padding: 2.2rem;
+    cursor: pointer;
+    position: relative;
+    bottom: 30px;
+}
+.fa-add:before, .fa-plus:before {
+    color: var(--fondo-sitio);
+    font-size: 1.2rem;
+}
+/*FIN FOTO PERFIL*/
 
 @media (min-width: 361px){
     form{
