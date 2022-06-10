@@ -139,7 +139,7 @@ section.formulario .datos{
     display: flex;
     flex-direction: column;
     padding: 20px 5px 20px 5px;
-    width: 62%;
+    width: 50%;
     margin: auto;
 }
 .loginbutton{
