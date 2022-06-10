@@ -1,22 +1,5 @@
-/* ----- PALETAS DE COLORES -----*/
-COLORES{
-    color: #666;    /* Gris oscuro */
-    color: #ebebeb; /* Gris claro  */
-    color: #39b54a; /*    Verde    */
-    color: #EAC926; /*   Amarillo  */
-    color: #03264C; /*     Azul    */
-    color: #1259c3  /*   Celeste   */
-}
-/* -------- TAMAÑOS TIPOGRAFICOS ------
-Cuerpos de texto: 12px
-Titulares (Basado en tu última visita/Ofertas): 24px
-Precios: 18px
-Descuentos: 16px
-Descripciones: 16px                  */
-
 *{
     font-family: 'Roboto', sans-serif;
-    outline: 1px solid red;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -134,7 +117,6 @@ main section article{
     margin: 10px 0px;
     background-color: white;
     display: inline-block;
-    transition: all 300ms;
     
 }
 main section article img{
@@ -155,7 +137,6 @@ main section .contenedor-articulos{
 
 main section article h3.descripcion{
     opacity: 0;
-    display:none;
     transition:all 300ms;
 }
 
@@ -179,9 +160,8 @@ main section article .producto i{
     color: #39b54a;
     padding: 5px;
     position: relative;
-    top: -85px;
-    right: -65px;
-    transition: all 500ms;
+    top: -93px;
+    transition: all 1.4s;
 }
 
 main section article:hover i{
@@ -196,6 +176,9 @@ main section article:hover i{
 main section article .producto .precio {
     font-size: 18px;
     width: 45%;
+    position: relative;
+    top:20px;
+    transition: all 300ms;
 }
 
 main section article .producto .descuento {
@@ -203,6 +186,9 @@ main section article .producto .descuento {
     width: 45%;
     color: #39b54a;
     padding-left: 10px;
+    position: relative;
+    top:20px;
+    transition: all 1.4s;
 }
 
 h3 {
@@ -277,14 +263,18 @@ footer .fa-solid {
         display:block;
         opacity:100;
     }
-    main section article .descripcion{
-        display: block;
-        
-    }
     main section article .producto i{
         right: -30%;
-        top: -85px;
+        top: -135px;
     }
+    main section article:hover .producto>.precio{
+    position: relative;
+    top:0;
+    }
+    main section article:hover .producto>.descuento{
+        position: relative;
+        top:0;
+        }
 }   
 @media (min-width: 451px) {
     .top-header{
@@ -342,12 +332,29 @@ footer .fa-solid {
     nav ul.links-nav > li {
         padding: 0px 10px;
     }
-
+    main section article .producto i{
+        right:30px;
+        top: -95px;
+    }
+}
 /*~~~ Desktop ~~~*/
 
 @media (min-width: 769px) {
     header .fondo-amarillo{
         padding-bottom: 8px;
+    }
+    header .fondo-amarillo img{
+        width: 300px;
+        padding-left: 0px;
+    }
+    header .fondo-amarillo .frase-header{
+        align-self: center;
+    }
+    header .fondo-amarillo .searchbar-header {
+        justify-content: center;
+    }
+    nav{
+        padding-inline: 10px;
     }
     nav ul.links-nav > li {
         padding: 0px 14px;
