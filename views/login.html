@@ -53,7 +53,29 @@
         </div>
         <img src="images/img-home-banner.jpg" alt="banner home" class="banner">
     </header>
-    <!-- CODIGO -->
+    <section class="formulario">
+        <form action="/" method="POST">
+            <div class="datos">
+                <label for="nombreUsuario" class="feedback">Usuario</label>
+                <input type="text" class="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de usuario" required>
+            </div>
+            <div class="datos">
+                <label for="password" class="feedback">Contraseña</label>
+                <input type="password" class="text" name="password" id="password" placeholder="********" required>
+                <div class="olvide">
+                    <a href="#" class="olvide">Olvidé mi contraseña</a>
+                </div>
+            </div>
+            
+            <div class="loginbutton">
+                <div class="botones">
+                    <button type="submit">Enviar</button>
+                </div>
+            </div>
+            <div class="remember">
+                <label for="rememberPassword" class="feedback"></label>
+                <input type="checkbox" name="rememberPassword" id="rememberPassword"><span>Quiero recordar mi usuario y contraseña</span>
+            </div>
     <footer>
         <div class="elemento-footer">
             <i class="fa-solid fa-credit-card"></i>

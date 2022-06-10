@@ -1,4 +1,3 @@
-
 form{
     display:flex;
     flex-direction: column;
@@ -31,7 +30,25 @@ input[type="file"]{
     color:white;
     background-color: #0f56a1;
     box-shadow: 0px 0px 10px #03264C;
+    transition:all 400ms;
 }
+.mercadoenvios:hover{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
 .mercadoenvios a{
     text-decoration: none;
     color: #EAC926;
@@ -41,18 +58,23 @@ p.small{
     font-size: small;
 }
 /* BOTONES SUBMIT */
-form > button {
-    margin: 30px;
+form button {
+    margin:auto;
+    text-align: center;
     cursor: pointer;
+    border-radius: 4px;
+    /*transicion*/
     transition: all 300ms;
+    background-color: #0f56a1;
+  
+    color:white;
     
 }
 form button:hover{
-    background-color: #0f56a1;
-    border-radius: 4px;
-    color:white;
-    border-color: #03264C;
-    cursor: pointer;
+    background-color: #EAC926;
+    border-radius: 8px;
+    color:#03264C;
+    border-color: #EAC926;
 }
 /* FOTO PERFIL*/
 input[type="file"]{
@@ -103,4 +125,39 @@ input[type="file"]{
     .mercadoenvios{
         width: 50%;
     }
+}
+
+
+/* LOGIN */
+section.formulario{
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section.formulario .datos{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 5px 20px 5px;
+    width: 62%;
+    margin: auto;
+}
+.loginbutton{
+    text-align: center;
+    width: 100%;
+}
+.olvide a.olvide{
+    font-size: small;
+}
+.olvide{
+    text-align: right;
+}
+.remember{
+    margin-top:20px;
+    text-align:center;
+    width: 90%;
+}
+.olvide a.olvide:hover{
+    text-decoration: none;
+    color:#EAC926;
 }
